@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Christmas';
+    src: url("../fonts/Christmas\ Bell\ -\ Personal\ Use.otf");
+}
+
 /* Wrapper */
 #wrapper {
     display: -moz-flex;
@@ -49,4 +54,7 @@
 /* Title */
 .title {
     text-align: center;
+    font-family: 'Christmas';
+    color: rgb(0, 135, 62);
+    font-size: 75pt;
 }
