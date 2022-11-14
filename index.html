@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
 
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+
         <!-- Google Analytics -->
     </head>
 
@@ -21,7 +23,9 @@
                     <p style="margin-top: 50px !important; margin-bottom: 50px !important;">The Lofts Christmas Party Invitation</p>
                 </div>
 
-                <p class="body"> You are invited to the 2nd annual Lofts Christams Party</p> 
+                <p class="body"> You are invited to the 2nd annual Lofts Christams Party</p>
+                
+                <p class="body">December 3rd at 7:00 PM</p>
 
                 <div class="button-container" style="margin-bottom: 32px !important;">
                     <div class="center">
@@ -97,37 +101,63 @@
                     <div class="center">
                         <h1 style="font-family: 'Christmas-body'; text-align: center;" id="RSVP">RSVP</h1>
 
+                        <script>
+                            $(document).ready(function () {
+                                $(".food-text").hide();
+                                $("#r1").click(function () {
+                                    $(".food-text").show();
+                                });
+                                $("#r2").click(function () {
+                                    $(".food-text").hide();
+                                });
+
+                                $(".text").hide();
+                                $("#r11").click(function () {
+                                    $(".text").show();
+                                });
+                                $("#r22").click(function () {
+                                    $(".text").hide();
+                                });
+                            });
+                        </script>
+
                         <form method="POST" action="https://formspree.io/f/xkneyral">
+
                             <textarea name="name" id="name" placeholder="Name" rows="1"></textarea>
 
                             <p style="font-family: 'Christmas-body'; text-align: center;">Are you bringing finger food?</p>
 
                             <div class="center-mid">
-                                <input type="radio" id="food-yes" name="food">
+                                <input type="radio" id="r1" name="food" data-toggle-value="food-yes">
                                 <label for="food-yes">Yes</label>
     
-                                <input type="radio" id="food-no" name="food">
+                                <input type="radio" id="r2" name="food">
                                 <label for="food-no">No</label>
+                            </div>
+
+                            <br>
+
+                            <div class="food-text">
+                                <textarea name="food" id="foodName" placeholder="What are you bringing?" rows="1"></textarea>
                             </div>
 
                             <br>
 
                             <p style="font-family: 'Christmas-body'; text-align: center;">Are you bringing a plus one?</p>
 
-                            <div>
-                                <div class="center-mid">
-                                    <input type="radio" id="extra-yes" name="extra">
-                                    <label for="extra-yes">Yes</label>
+                            
+                            <div class="center-mid">
+                                <input type="radio" id="r11" name="extra" onClick="getResults()">
+                                <label for="extra-yes">Yes</label>
         
-                                    <input type="radio" id="extra-no" name="extra">
-                                    <label for="extra-nol">No</label>
-                                </div>
+                                <input type="radio" id="r22" name="extra">
+                                <label for="extra-no">No</label>
+                            </div>
 
-                                <br>
-                                
-                                <div class="extra details">
-                                    <textarea name="extraName" id="extraName" placeholder="Plus One Name" rows="1"></textarea>
-                                </div>
+                            <br>
+
+                            <div class="text">
+                                <textarea name="extraName" id="extraName" placeholder="Plus One Name" rows="1"></textarea>
                             </div>
 
                             <br>
@@ -139,6 +169,8 @@
                             </div>
 
                         </form>
+
+                        <p class="body"><a href="assets/files/2nd Annual Lofts Christmas Party.ics">Add to calander</a></p>
                     </div>
                 </div>
 
