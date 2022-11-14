@@ -33,8 +33,6 @@
                     </div>
                 </div>
 
-                <a href="confirm.html">Confirm!</a>
-
                 <p class="body" id="demo"></p>
 
                 <!-- Container for the image gallery -->
@@ -153,7 +151,7 @@
 
                         <form method="POST" ID="rsvpForm" action="https://script.google.com/macros/s/AKfycbzlL6wLh9C6K2Dh6ECrtce79cAUPy9q3kiMOMIx5hf5AXINa51tRKC_8oXuCFd-2qmL/exec">
 
-                            <textarea name="Name" id="name" placeholder="Name" rows="1"></textarea>
+                            <textarea name="Name" id="name" placeholder="Name" rows="1" required></textarea>
 
                             <p style="font-family: 'Christmas-body'; text-align: center;">Are you bringing finger food?</p>
 
@@ -191,7 +189,7 @@
                                 yourForm.addEventListener("submit", function(e) { 
                                     e.preventDefault(); const data = new FormData(yourForm); 
                                     const action = e.target.action; fetch(action, { method: 'POST', body: data, }) .then(() => 
-                                        { window.location.replace('https://iansjackson.com/loftsChristmasPartyInvatation/') 
+                                        { window.location.replace('https://iansjackson.com/loftsChristmasPartyInvatation/confirm.html') 
                                     }) 
                                 })
                              }); 
