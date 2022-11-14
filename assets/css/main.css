@@ -949,3 +949,13 @@
           margin-top: -3em; }
           .row.gtr-200.gtr-uniform > * {
             padding-top: 3em; } }
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
