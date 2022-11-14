@@ -24,12 +24,12 @@
 
                 <div class="button-container" style="margin-bottom: 32px !important;">
                     <div class="center">
-                        <button style="font-size: 20pt; font-family: 'Christmas-body';">RSVP</button>
+                        <button style="font-size: 20pt; font-family: 'Christmas-body';"><a href="#RSVP">RSVP</a></button>
                     </div>
                 </div>
 
                 <!-- Container for the image gallery -->
-                <div class="image-container">
+                <div class="image-container" style="height: 800px;">
                     <style>
                         .embed-container { position: relative; padding-bottom: 65%; height: 0px; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
                     </style>
@@ -82,7 +82,64 @@
 
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div class="image-row">
+                    </div>
                 </div>
+
+                <br>
+
+                <!-- RSVP Info -->
+                <div class="button-container">
+                    <div class="center">
+                        <h1 style="font-family: 'Christmas-body'; text-align: center;" id="RSVP">RSVP</h1>
+
+                        <form method="POST" action="https://formspree.io/f/xkneyral">
+                            <textarea name="name" id="name" placeholder="Name" rows="1"></textarea>
+
+                            <p style="font-family: 'Christmas-body'; text-align: center;">Are you bringing finger food?</p>
+
+                            <div class="center-mid">
+                                <input type="radio" id="food-yes" name="food">
+                                <label for="food-yes">Yes</label>
+    
+                                <input type="radio" id="food-no" name="food">
+                                <label for="food-no">No</label>
+                            </div>
+
+                            <br>
+
+                            <p style="font-family: 'Christmas-body'; text-align: center;">Are you bringing a plus one?</p>
+
+                            <div>
+                                <div class="center-mid">
+                                    <input type="radio" id="extra-yes" name="extra">
+                                    <label for="extra-yes">Yes</label>
+        
+                                    <input type="radio" id="extra-no" name="extra">
+                                    <label for="extra-nol">No</label>
+                                </div>
+
+                                <br>
+                                
+                                <div class="extra details">
+                                    <textarea name="extraName" id="extraName" placeholder="Plus One Name" rows="1"></textarea>
+                                </div>
+                            </div>
+
+                            <br>
+                            <br>
+
+                            <div class="center-mid">
+                                <input type="reset" value="Clear" /> 
+                                <input type="submit" value="Submit" />
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
         <!-- Scripts -->
