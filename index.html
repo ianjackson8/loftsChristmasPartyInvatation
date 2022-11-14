@@ -149,29 +149,29 @@
                             });
                         </script>
 
-                        <form method="POST" action="https://formspree.io/f/xkneyral">
+                        <form method="POST" ID="rsvpForm" action="https://script.google.com/macros/s/AKfycbzlL6wLh9C6K2Dh6ECrtce79cAUPy9q3kiMOMIx5hf5AXINa51tRKC_8oXuCFd-2qmL/exec">
 
-                            <textarea name="name" id="name" placeholder="Name" rows="1"></textarea>
+                            <textarea name="Name" id="name" placeholder="Name" rows="1"></textarea>
 
                             <p style="font-family: 'Christmas-body'; text-align: center;">Are you bringing finger food?</p>
 
                             <div class="center-mid">
-                                <input type="radio" id="r1" name="food" data-toggle-value="food-yes">
+                                <input type="radio" id="r1" name="BringFood" value="Yes">
                                 <label for="food-yes">Yes</label>
     
-                                <input type="radio" id="r2" name="food">
+                                <input type="radio" id="r2" name="BringFood" value="No">
                                 <label for="food-no">No</label>
                             </div>
 
                             <br>
 
                             <div class="food-text">
-                                <textarea name="food" id="foodName" placeholder="What are you bringing?" rows="1"></textarea>
+                                <textarea name="Food" id="foodName" placeholder="What are you bringing?" rows="1"></textarea>
                             </div>
-                            
+
                             <br>
 
-                            <textarea name="songRequest" id="songRequest" placeholder="Song Request?" rows="1"></textarea>
+                            <textarea name="Song" id="songRequest" placeholder="Song Request?" rows="1"></textarea>
 
                             <br>
                             <br>
@@ -182,6 +182,18 @@
                             </div>
 
                         </form>
+
+                        <script type="text/javascript"> 
+                            window.addEventListener("DOMContentLoaded", function() { 
+                                const yourForm = document.getElementById('rsvpForm'); 
+                                yourForm.addEventListener("submit", function(e) { 
+                                    e.preventDefault(); const data = new FormData(yourForm); 
+                                    const action = e.target.action; fetch(action, { method: 'POST', body: data, }) .then(() => 
+                                        { window.location.replace('https://iansjackson.com/loftsChristmasPartyInvatation/') 
+                                    }) 
+                                })
+                             }); 
+                        </script>
 
                         <p class="body"><a href="assets/files/2nd Annual Lofts Christmas Party.ics">Add to calendar</a></p>
                     </div>
